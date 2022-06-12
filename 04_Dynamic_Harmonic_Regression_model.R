@@ -32,7 +32,7 @@ checkresiduals(bestfit, lag=15)
 #testing (delete later)
 final_fit <- Arima(myts,order=c(3,1,1), xreg = fourier(myts, K = 2))
 final_fit[["aicc"]]
-fcast <- forecast(final_fit, xreg = fourier(myts, K = 2),h =1/365)
+fcast <- forecast(final_fit, xreg = fourier(myts, K = 2))
 
 #validation loop  - under development
 train_ts <- myts
